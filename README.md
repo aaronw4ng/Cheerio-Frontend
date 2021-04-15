@@ -1,9 +1,5 @@
 <div align="center">
-  <img src="documentation/rnsk-logo.jpg" alt="React Native Expo Starter Kit" width="400" />
-  <p></p>
-  <h1>React Native (Expo) App</h1>
-  <p></p>
-  <a href="https://expo.io/@mcnamee/react-native-starter-kit"><img src="documentation/expo-demo.jpg" alt="React Native Expo Demo" height="50" /></a>
+  <h1>Cheerio App 🐰</h1>
   <p></p>
   <sup>
     <a href="https://github.com/mcnamee/react-native-expo-starter-kit/actions">
