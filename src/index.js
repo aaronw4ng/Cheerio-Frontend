@@ -33,7 +33,7 @@ class App extends React.Component {
     }
 
     return (
-      <Root >
+      <Root>
         <StyleProvider style={getTheme(theme)}>
           <Router>
             <Stack key="root">{Routes}</Stack>
