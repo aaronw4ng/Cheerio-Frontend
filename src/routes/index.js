@@ -1,6 +1,6 @@
 import React from 'react';
 import { Scene, Stack } from 'react-native-router-flux';
-import Question1 from '../components/Questions/Question1';
+import Question1 from '../components/Questions/Question1-Carousel';
 import Login from '../components/Screens/Login';
 
 const Index = (

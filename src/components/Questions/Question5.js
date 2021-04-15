@@ -17,7 +17,7 @@ const styles = StyleSheet.create({
   },
 });
 
-const Question1 = () => (
+const Question5 = () => (
   <Container>
     <Content padder>
       <Spacer size={15} />
@@ -33,7 +33,7 @@ const Question1 = () => (
         style={{ marginLeft: 'auto', marginRight: 'auto' }}
       />
       <Spacer size={25} />
-      <H2 style={styles.H2Style}>How are you feeling?</H2>
+      <H2 style={styles.H2Style}>Do you feel more bitter or more disbelief?</H2>
       <Spacer size={100} />
       <GallerySwiper
         style={{
@@ -47,7 +47,7 @@ const Question1 = () => (
         }}
         images={[
           {
-            uri: 'https://i.imgur.com/c9x0VLe.jpg',
+            uri: '../../../assets/images/agression1.png',
             dimensions: { width: 1080, height: 1920 },
           },
           {
@@ -69,9 +69,9 @@ const Question1 = () => (
         ]}
       />
       <Spacer size={100} />
-      <AppButton onPress={() => alert("button pressed")} title="Next Question" />
+      <AppButton onPress={() => alert("question 5 pressed")} title="Next Question" />
     </Content>
   </Container>
 );
 
-export default Question1;
+export default Question5;
