@@ -2,7 +2,7 @@ import React from 'react';
 import * as Font from 'expo-font';
 import { Router, Stack } from 'react-native-router-flux';
 
-// Fonts
+// Font
 import { Root, StyleProvider } from 'native-base';
 import getTheme from '../native-base-theme/components';
 import theme from '../native-base-theme/variables/commonColor';
@@ -21,6 +21,8 @@ class App extends React.Component {
       Roboto: require('native-base/Fonts/Roboto.ttf'),
       Roboto_medium: require('native-base/Fonts/Roboto_medium.ttf'),
       Ionicons: require('@expo/vector-icons/build/vendor/react-native-vector-icons/Fonts/Ionicons.ttf'),
+      Bungee_Regular: require('../assets/fonts/Bungee-Regular.ttf'),
+      Arial_Round: require('../assets/fonts/arlrdbd.ttf'),
     });
 
     this.setState({ loading: false });

@@ -1,38 +1,24 @@
 import React from 'react';
 
-import { Container, Content, Text, H1, H2, H3 } from 'native-base';
+import { Container, Content, H1, H2 } from 'native-base';
 
 import Spacer from '../UI/Spacer';
 
 const About = () => (
   <Container>
     <Content padder>
+      <Spacer size={15} />
+      <H1 style={{ fontFamily: 'Bungee_Regular', fontSize: 26 }}>READ ME</H1>
       <Spacer size={10} />
-      <H1 style={{ fontFamily: 'Bungee-Regular' }}>READ ME</H1>
-      <Spacer size={10} />
-      <Text>
-        Dnec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo,
-        tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem
-        malesuada magna mollis euismod. Donec sed odio dui.{' '}
-      </Text>
-
-      <Spacer size={30} />
-      <H2>Heading 2</H2>
-      <Spacer size={10} />
-      <Text>
-        Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo,
-        tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem
-        malesuada magna mollis euismod. Donec sed odio dui.{' '}
-      </Text>
-
-      <Spacer size={30} />
-      <H3>Heading 3</H3>
-      <Spacer size={10} />
-      <Text>
-        Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo,
-        tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem
-        malesuada magna mollis euismod. Donec sed odio dui.{' '}
-      </Text>
+      <H2
+        style={{
+          fontFamily: 'Arial_Round',
+          textAlign: 'center',
+          fontSize: 20,
+        }}
+      >
+        How are you feeling?
+      </H2>
     </Content>
   </Container>
 );
