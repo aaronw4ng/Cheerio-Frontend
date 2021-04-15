@@ -1,24 +1,14 @@
 import React from 'react';
-import { StyleSheet } from 'react-native';
-import { Container, Content, Text, H1, H2, H3 } from 'native-base';
-import Spacer from '../UI/Spacer';
 
-const styles = StyleSheet.create({
-  baseText: {
-    fontFamily: 'Cochin',
-  },
-  titleText: {
-    fontSize: 20,
-    fontWeight: 'bold',
-    textAlign: 'center',
-  },
-});
+import { Container, Content, Text, H1, H2, H3 } from 'native-base';
+
+import Spacer from '../UI/Spacer';
 
 const About = () => (
   <Container>
     <Content padder>
-      <Spacer size={30} />
-      <H1 style={styles.titleText}>READ ME</H1>
+      <Spacer size={10} />
+      <H1 style={{ fontFamily: 'Bungee-Regular' }}>READ ME</H1>
       <Spacer size={10} />
       <Text>
         Dnec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo,

@@ -2,6 +2,7 @@ import React from 'react';
 import * as Font from 'expo-font';
 import { Router, Stack } from 'react-native-router-flux';
 
+// Fonts
 import { Root, StyleProvider } from 'native-base';
 import getTheme from '../native-base-theme/components';
 import theme from '../native-base-theme/variables/commonColor';

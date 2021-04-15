@@ -990,6 +990,11 @@
   dependencies:
     "@types/hammerjs" "^2.0.36"
 
+"@expo-google-fonts/bungee@^0.1.0":
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/@expo-google-fonts/bungee/-/bungee-0.1.0.tgz#49ff15870285aa50ffb84a4660dfcac0969dec71"
+  integrity sha512-lrZ6SoVZ0EOusdV5pWqJBQs7hoJKwvwoaZiO2KanWfuntZVFkhzbxJ4dVtSY6ZCd3QGCTUgKx6rrjCL327ZLlg==
+
 "@expo/babel-preset-cli@0.2.16":
   version "0.2.16"
   resolved "https://registry.yarnpkg.com/@expo/babel-preset-cli/-/babel-preset-cli-0.2.16.tgz#64102032ae9b6cb931c80d8b6371dd08f2f5e748"
@@ -3863,7 +3868,7 @@ expo-file-system@~9.0.1:
   dependencies:
     uuid "^3.4.0"
 
-expo-font@^8.2.1, expo-font@~8.2.1:
+expo-font@~8.2.1:
   version "8.2.1"
   resolved "https://registry.yarnpkg.com/expo-font/-/expo-font-8.2.1.tgz#82f9d7f3e96a0ea4376e573b126379aa754ea807"
   integrity sha512-hVcHAMgHm6TAMgJvdk9yWb2/KhHs4gLjPrZzW0prFBPKltGN1KK1EcL1NhjuIRs0r5k8Lve2zE8HbxTO9NRnvA==
