@@ -5,7 +5,7 @@ import * as Progress from 'react-native-progress';
 import { Container, Content, H1, H2 } from 'native-base';
 import { Alert, StyleSheet } from 'react-native';
 
-import NextButton from '../UI/NextButton';
+import AppButton from '../UI/AppButton';
 import Spacer from '../UI/Spacer';
 
 const styles = StyleSheet.create({
@@ -69,7 +69,7 @@ const Question1 = () => (
         ]}
       />
       <Spacer size={100} />
-      <NextButton onPress={() => Alert.alert('Simple Button pressed')} title="Next Question" />
+      <AppButton onPress={() => Alert.alert('Simple Button pressed')} title="Next Question" />
     </Content>
   </Container>
 );

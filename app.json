@@ -4,20 +4,17 @@
     "slug": "ReactNativeExpoStarterKit",
     "version": "1.0.0",
     "orientation": "portrait",
-    "splash": {
-      "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
-    },
     "updates": {
       "fallbackToCacheTimeout": 0
     },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
+    "assetBundlePatterns": ["**/*"],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "splash": {
+        "image": "./assets/images/SplashScreen.png",
+        "resizeMode": "cover"
+      }
     },
-    "web": {
-    }
+    "web": {}
   }
 }

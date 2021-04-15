@@ -1,6 +1,7 @@
 import React from 'react';
 import { Scene, Stack } from 'react-native-router-flux';
 import Question1 from '../components/Questions/Question1';
+import Login from '../components/Screens/Login';
 
 const Index = (
   <Stack hideNavBar>
