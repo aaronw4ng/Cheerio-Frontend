@@ -10,12 +10,13 @@ import AppButton from '../UI/AppButton';
 import Spacer from '../UI/Spacer';
 
 const styles = StyleSheet.create({
-    H1Style: { fontFamily: 'Bungee_Regular', fontSize: 26 },
-    H2Style: {
-        fontFamily: 'Arial_Round',
-        textAlign: 'center',
-        fontSize: 20,
-    },
+  H1Style: { fontFamily: 'Bungee_Regular', fontSize: 26, marginTop: 40 },
+  H2Style: {
+    fontFamily: 'Arial_Round',
+    textAlign: 'center',
+    fontSize: 20,
+    paddingBottom: 80,
+  },
 });
 
 /*const Question1 = () => (
@@ -77,97 +78,102 @@ const styles = StyleSheet.create({
 
 export default Question1;*/
 
-
-
 export default class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      activeIndex: 0,
+      carouselItems: [
+        {
+          title: 'Sad',
+          subtitle: 'Text 1',
+          illustration: 'https://imgur.com/lfaxNrK.png',
+        },
+        {
+          title: 'Happy',
+          subtitle: 'Text 2',
+          illustration: 'https://imgur.com/2EK0yOs.png',
+        },
+        {
+          title: 'Surprised',
+          subtitle: 'Text 3',
+          illustration: 'https://imgur.com/6NDa1fH.png',
+        },
+        {
+          title: 'Disgusted',
+          subtitle: 'Text 4',
+          illustration: 'https://imgur.com/MbQtosJ.png',
+        },
+        {
+          title: 'Anger',
+          subtitle: 'Text 5',
+          illustration: 'https://imgur.com/l8OC3IL.png',
+        },
+      ],
+    };
+  }
 
+  _renderItem({ item, index }) {
+    return (
+      <View
+        style={{
+          backgroundColor: '#FCEAB8',
+          borderRadius: 15,
+          borderColor: 'black',
+          borderWidth: 1.5,
+          height: 300,
+          marginLeft: 25,
+          marginRight: 25,
+          shadowColor: 'black',
+          shadowOffset: { height: 8 },
+          shadowOpacity: 0.2,
+        }}
+      >
+        <Image
+          style={{
+            width: '100%',
+            height: '100%',
+            overflow: 'hidden',
+            borderRadius: 15,
+          }}
+          source={{ uri: item.illustration }}
+        />
+        {/* <Text style={{ fontSize: 30 }}>{item.title}</Text> */}
+        {/* <Text>{item.subtitle}</Text> */}
+      </View>
+    );
+  }
 
-    constructor(props) {
-        super(props);
-        this.state = {
-            activeIndex: 0,
-            carouselItems: [
-                {
-                    image: '../../../assets/images/anger1',
-                    title: "Item 1",
-                    text: "Text 1",
-                },
-                {
-                    image: '../../../assets/images/anger1',
-                    title: "Item 2",
-                    text: "Text 2",
-                },
-                {
-                    image: '../../../assets/images/anger1',
-                    title: "Item 3",
-                    text: "Text 3",
-                },
-                {
-                    image: '../../../assets/images/anger1',
-                    title: "Item 4",
-                    text: "Text 4",
-                },
-                {
-                    image: '../../../assets/images/anger1',
-                    title: "Item 5",
-                    text: "Text 5",
-                },
-            ]
-        }
-    }
+  render() {
+    return (
+      <SafeAreaView style={{ flex: 1, backgroundColor: '#F6F6F6', paddingTop: 50 }}>
+        <H1 style={styles.H1Style}>READ ME</H1>
 
-    _renderItem({ item, index }) {
-        return (
-            <View style={{
-                backgroundColor: '#FCEAB8',
-                borderRadius: 15,
-                borderColor: 'black',
-                borderWidth: 1,
-                height: 300,
-                padding: 50,
-                marginLeft: 25,
-                marginRight: 25,
-            }}>
-                <Image source={{ uri: item.image }} />
-                <Text style={{ fontSize: 30 }}>{item.title}</Text>
-                <Text>{item.text}</Text>
-            </View>
+        <Progress.Bar
+          progress={0.1}
+          width={335}
+          height={10}
+          unfilledColor="#fff"
+          borderColor="#000"
+          color="#FCEAB8"
+          style={{ marginLeft: 'auto', marginRight: 'auto', margin: 20 }}
+        />
 
-        )
-    }
+        <H2 style={styles.H2Style}>How are you feeling?</H2>
 
-    render() {
-        return (
-            <SafeAreaView style={{ flex: 1, backgroundColor: '#F6F6F6', paddingTop: 50 }}>
-                
-                <H1 style={styles.H1Style}>READ ME</H1>
-                
-                <Progress.Bar
-                    progress={0.1}
-                    width={335}
-                    height={10}
-                    unfilledColor="#fff"
-                    borderColor="#000"
-                    color="#FCEAB8"
-                    style={{ marginLeft: 'auto', marginRight: 'auto' }}
-                />
-             
-                <H2 style={styles.H2Style}>How are you feeling?</H2>
-            
-                
-                <View style={{ flex: 1, flexDirection: 'row', justifyContent: 'center', }}>
-                    <Carousel
-                        layout={"default"}
-                        ref={ref => this.carousel = ref}
-                        data={this.state.carouselItems}
-                        sliderWidth={300}
-                        itemWidth={300}
-                        renderItem={this._renderItem}
-                        onSnapToItem={index => this.setState({ activeIndex: index })} />
-                </View>
-               
-            </SafeAreaView>
-        );
-    }
+        <View style={{ flex: 1, flexDirection: 'row', justifyContent: 'center' }}>
+          <Carousel
+            layout={'default'}
+            ref={(ref) => (this.carousel = ref)}
+            data={this.state.carouselItems}
+            sliderWidth={300}
+            itemWidth={280}
+            renderItem={this._renderItem}
+            onSnapToItem={(index) => this.setState({ activeIndex: index })}
+          />
+        </View>
+        <AppButton onPress={() => alert('Next question')} title="Next Question" />
+      </SafeAreaView>
+    );
+  }
 }
-
