@@ -1,5 +1,5 @@
 import React from 'react';
-import { Alert, StyleSheet, View, Image, Text } from 'react-native';
+import { Alert, StyleSheet, View, Image, Text, TouchableOpacity, Touchable } from 'react-native';
 import { Container, TabContainer, Header, TabHeading, Content, Button, H1, H2, H3 } from 'native-base';
 import { LinearGradient } from "expo-linear-gradient";
 import { Searchbar } from 'react-native-paper';
@@ -46,7 +46,8 @@ const styles = StyleSheet.create({
     },
     emotionDescription: {
         marginLeft: 25,
-        fontSize: 13
+        fontSize: 13, 
+        width: 225
     }
 
 });
@@ -68,27 +69,47 @@ const ResultPage = () => (
                 />
             </View>
             <Button style={styles.buttonWhite}>
-                <View style={{ flex: 1, flexDirection: 'column' }}>
-                    <Text style={styles.emotion}>Grief</Text>
-                    <Text style={styles.emotionDescription}>A painful feeling of loss, usually very deep and distressful</Text>
+                <View style={{flex: 1, flexDirection: 'row'}}>
+                    <View>
+                        <Text style={styles.emotion}>Grief</Text>
+                        <Text style={styles.emotionDescription}>A painful feeling of loss, usually very deep and distressful</Text>
+                    </View>
+                    <Image 
+                    style={{marginTop: 25, marginLeft: 20}}
+                    source={require('../../assets/images/arrow_back_ios.png')} />
                 </View>
             </Button>
             <Button style={styles.buttonClear}>
-                <View style={{ flex: 1, flexDirection: 'column' }}>
-                    <Text style={styles.emotion}>Dissapointed</Text>
-                    <Text style={styles.emotionDescription}>Feeling sad when you are excited about something but it doesn't end up happening the way you hope</Text>
+                <View style={{flex: 1, flexDirection: 'row'}}>
+                    <View>
+                        <Text style={styles.emotion}>Dissapointed</Text>
+                        <Text style={styles.emotionDescription}>Feeling sad when you are excited about something but it doesn't end up happening the way you hope</Text>
+                    </View>
+                    <Image 
+                    style={{marginTop: 25, marginLeft: 20}}
+                    source={require('../../assets/images/arrow_back_ios.png')} />
                 </View>
             </Button>
             <Button style={styles.buttonClear}>
-                <View style={{ flex: 1, flexDirection: 'column' }}>
-                    <Text style={styles.emotion}>Remorseful</Text>
-                    <Text style={styles.emotionDescription}>Feeling really sorry because you did or said something wrong</Text>
+                <View style={{flex: 1, flexDirection: 'row'}}>
+                    <View>
+                        <Text style={styles.emotion}>Remorsefu</Text>
+                        <Text style={styles.emotionDescription}>Feeling really sorry because you did or said something wrong</Text>
+                    </View>
+                    <Image 
+                    style={{marginTop: 25, marginLeft: 20}}
+                    source={require('../../assets/images/arrow_back_ios.png')} />
                 </View>
             </Button>
             <Button style={styles.buttonClear}>
-                <View style={{ flex: 1, flexDirection: 'column' }}>
-                    <Text style={styles.emotion}>Lonely</Text>
-                    <Text style={styles.emotionDescription}>Feeling left out, not invited, or alone</Text>
+                <View style={{flex: 1, flexDirection: 'row'}}>
+                    <View>
+                        <Text style={styles.emotion}>Lonely</Text>
+                        <Text style={styles.emotionDescription}>Feeling left out, not invited, or alone</Text>
+                    </View>
+                    <Image 
+                    style={{marginTop: 25, marginLeft: 20}}
+                    source={require('../../assets/images/arrow_back_ios.png')} />
                 </View>
             </Button>
         </LinearGradient>

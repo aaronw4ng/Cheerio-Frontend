@@ -3,6 +3,8 @@ import { Alert, StyleSheet, View, Image, Text } from 'react-native';
 import { Container, TabContainer, Header, TabHeading, Content, Button, H1, H2, H3 } from 'native-base';
 import { LinearGradient } from "expo-linear-gradient";
 import { Searchbar } from 'react-native-paper';
+import Question1 from './Questions/Question1';
+import { createStackNavigator, createAppContainer } from 'react-navigation';
 
 
 const styles = StyleSheet.create({
@@ -28,7 +30,7 @@ const styles = StyleSheet.create({
 
 });
 
-const ResultPage = () => (
+const ResultPage = (props) => (
     <Container>
 
         <LinearGradient
@@ -42,10 +44,13 @@ const ResultPage = () => (
             }}>Hi, Max!</Text>
             <Text style={{ fontSize: 20 }}>Current Streak</Text>
             <Text style={{ fontSize: 25, fontWeight: 'bold', marginTop: 15 }}>21 Days</Text>
-            <Button style={styles.button}><Text style={{
+            <Button style={styles.button}
+            onPress={() => alert("hi")}
+            ><Text style={{
                 fontSize: 18,
                 paddingLeft: 25
-            }}>Let's get started!</Text></Button>
+            }}
+            >Let's get started!</Text></Button>
 
 
         </LinearGradient>
