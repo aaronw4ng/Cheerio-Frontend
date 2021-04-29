@@ -4,6 +4,7 @@ import { Container, TabContainer, TabHeading, Content, Button, H1, H2, H3 } from
 import Spacer from './UI/Spacer';
 import { LinearGradient } from "expo-linear-gradient";
 import Unorderedlist from 'react-native-unordered-list';
+import * as Progress from 'react-native-progress';
 
 
 const styles = StyleSheet.create({
@@ -40,6 +41,9 @@ const ResultPage = () => (
                         fontSize: 30,
                         textAlign: 'center'
                     }}>Analysis</Text>
+
+                   
+
                     <Image source={require('../../assets/images/resultsPageBackground.png')} style={{ position: 'absolute', width: 410, height: 1650, marginTop: 120, }} />
                     <View style={{ flexDirection: 'row', marginTop: 140 }}>
                         <Image source={require('../../assets/images/grief_resultsPage.png')} style={{ height: 121, margin: 5, marginLeft: 15 }} />
@@ -118,7 +122,26 @@ const ResultPage = () => (
                         <Text>8. If you could change anything about this event, what would you change?</Text>
                     </View>
                 </View>
+                
             </ScrollView>
+            <View style={{
+                    height: 80,
+                    width: 400,
+                    borderRadius: 24,
+                    backgroundColor: 'white',
+                    flexDirection: 'row',
+                    justifyContent: 'space-evenly',
+                }}>
+                    <TouchableOpacity
+                    onPress={() => alert("Don't forget to save your emotion")}>
+                        <Image source={require('../../assets/images/navbar/home-nav-inactive.png')} /></TouchableOpacity>
+                    <TouchableOpacity
+                    onPress={() => alert("Don't forget to save your emotion")}
+                    ><Image source={require('../../assets/images/navbar/readme-nav-active.png')} /></TouchableOpacity>
+                    <TouchableOpacity
+                    ><Image source={require('../../assets/images/navbar/dictionary-nav-inactive.png')} /></TouchableOpacity>
+
+                </View>
         </LinearGradient>
     </Container>
 

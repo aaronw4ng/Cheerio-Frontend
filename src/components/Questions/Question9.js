@@ -3,7 +3,7 @@ import React from 'react';
 import GallerySwiper from 'react-native-gallery-swiper';
 import * as Progress from 'react-native-progress';
 import { Container, Content, H1, H2 } from 'native-base';
-import { Alert, StyleSheet } from 'react-native';
+import { Alert, StyleSheet, View, Image, TouchableOpacity } from 'react-native';
 
 import AppButton from '../UI/AppButton';
 import Spacer from '../UI/Spacer';
@@ -70,6 +70,20 @@ const Question9 = () => (
       />
       <Spacer size={100} />
       <AppButton onPress={() => alert("question 9 pressed")} title="Next Question" />
+      <View style={{
+          height: 80,
+          width: 410,
+          borderRadius: 24,
+          backgroundColor: 'white',
+          flexDirection: 'row',
+          justifyContent: 'space-evenly',
+          
+        }}>
+          <TouchableOpacity><Image source={require('../../../assets/images/navbar/home-nav-inactive.png')} /></TouchableOpacity>
+          <TouchableOpacity><Image source={require('../../../assets/images/navbar/readme-nav-active.png')} /></TouchableOpacity>
+          <TouchableOpacity><Image source={require('../../../assets/images/navbar/dictionary-nav-inactive.png')} /></TouchableOpacity>
+
+        </View>
     </Content>
   </Container>
 );

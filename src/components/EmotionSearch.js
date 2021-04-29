@@ -27,7 +27,8 @@ const styles = StyleSheet.create({
         backgroundColor: 'white',
         width: 335,
         height: 106,
-        borderRadius: 24
+        borderRadius: 24, 
+        marginLeft: 25
     },
     buttonClear: {
         backgroundColor: 'rgba(246, 246, 246, 0.1)',
@@ -36,7 +37,8 @@ const styles = StyleSheet.create({
         borderWidth: 2,
         width: 335,
         height: 106,
-        borderRadius: 24
+        borderRadius: 24,
+        marginLeft: 25
     },
     emotion: {
         margin: 5,
@@ -58,6 +60,7 @@ const ResultPage = () => (
             colors={['#64B3F4', '#B9B6E5']}
             start={[0.1, 0.1]}
             style={styles.linearGradient}>
+                <Content>
             <View style={{ padding: 20 }}>
                 <Text style={{
                     fontSize: 30,
@@ -112,6 +115,21 @@ const ResultPage = () => (
                     source={require('../../assets/images/arrow_back_ios.png')} />
                 </View>
             </Button>
+            </Content>
+            <View style={{
+        height: 80,
+        width: 410,
+        borderRadius: 24,
+        backgroundColor: 'white',
+        flexDirection: 'row',
+        justifyContent: 'space-evenly',
+
+      }}>
+        <TouchableOpacity><Image source={require('../../assets/images/navbar/home-nav-inactive.png')} /></TouchableOpacity>
+        <TouchableOpacity><Image source={require('../../assets/images/navbar/readme-nav-inactive.png')} /></TouchableOpacity>
+        <TouchableOpacity><Image source={require('../../assets/images/navbar/dictionary-nav-active.png')} /></TouchableOpacity>
+
+      </View>
         </LinearGradient>
     </Container>
 );

@@ -18,7 +18,7 @@ const styles = StyleSheet.create({
 
 const ResultPage = () => (
     <Container style={{ backgroundColor: '#ECF0F3' }}>
-
+    <Content>
         <View style={{ padding: 20 }}>
             <Text style={{
                 fontSize: 30,
@@ -53,6 +53,21 @@ const ResultPage = () => (
             </TouchableOpacity>
             </View>
         </View>
+        </Content>
+        <View style={{
+        height: 80,
+        width: 410,
+        borderRadius: 24,
+        backgroundColor: 'white',
+        flexDirection: 'row',
+        justifyContent: 'space-evenly',
+
+      }}>
+        <TouchableOpacity><Image source={require('../../assets/images/navbar/home-nav-inactive.png')} /></TouchableOpacity>
+        <TouchableOpacity><Image source={require('../../assets/images/navbar/readme-nav-inactive.png')} /></TouchableOpacity>
+        <TouchableOpacity><Image source={require('../../assets/images/navbar/dictionary-nav-active.png')} /></TouchableOpacity>
+
+      </View>
     </Container>
     
 );

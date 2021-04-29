@@ -32,9 +32,9 @@ export default class App extends React.Component {
     super(props);
     this.state = {
       activeIndex: 0,
-      startColor: '#A9CDEB',
-      endColor: '#B9B6E5',
-      currEmotion: 'powerless',
+      startColor: '#F9748F',
+      endColor: '#FE9A8B',
+      currEmotion: 'how',
       carouselItems: [
         {
           title: 'How could you have done this to me?',
@@ -100,7 +100,7 @@ export default class App extends React.Component {
             style={{ marginLeft: 'auto', marginRight: 'auto', margin: 20 }}
           />
 
-          <H2 style={styles.H2Style}>Do you feel more powerless or victimized?</H2>
+          <H2 style={styles.H2Style}>Do you feel more bitter or more disbelief?</H2>
 
           <View style={{ flex: 1, flexDirection: 'row', justifyContent: 'center' }}>
             <Carousel
@@ -112,10 +112,10 @@ export default class App extends React.Component {
               renderItem={this._renderItem}
               onSnapToItem={(index) => this.setState({ activeIndex: index })}
               onScrollEndDrag={() => {
-                if (this.state.currEmotion === 'powerless') {
-                  this.state.startColor = '#F9748F';
-                  this.state.endColor = '#FE9A8B';
-                  this.state.currEmotion = 'victimized';
+                if (this.state.currEmotion === 'how') {
+                  this.state.startColor = '#FFC796';
+                  this.state.endColor = '#FF6B95';
+                  this.state.currEmotion = 'why';
                 }
               }}
             />
