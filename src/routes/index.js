@@ -1,6 +1,7 @@
 import React from 'react';
 import { Scene, Stack } from 'react-native-router-flux';
-import Question1 from '../components/Questions/Question1';
+
+import Questions from '../components/Questions/index';
 import ResultPage from '../components/ResultPage';
 import EmotionSearch from '../components/EmotionSearch';
 import GeneralEmotionSearch from '../components/GeneralEmotionSearch';
@@ -11,7 +12,8 @@ const Index = (
   <Stack hideNavBar>
     <Scene hideNavBar>
       <Stack key="home">
-        <Scene key="home" component={GeneralEmotionSearch} />
+        {/* Start with question flow for sake of demo */}
+        <Scene key="home" component={Questions} />
       </Stack>
     </Scene>
   </Stack>

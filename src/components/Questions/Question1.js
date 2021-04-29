@@ -18,66 +18,6 @@ const styles = StyleSheet.create({
     paddingBottom: 80,
   },
 });
-
-/*const Question1 = () => (
-  <Container>
-    <Content padder>
-      <Spacer size={15} />
-      <H1 style={styles.H1Style}>READ ME</H1>
-      <Spacer size={25} />
-      <Progress.Bar
-        progress={0.1}
-        width={335}
-        height={10}
-        unfilledColor="#fff"
-        borderColor="#000"
-        color="#FCEAB8"
-        style={{ marginLeft: 'auto', marginRight: 'auto' }}
-      />
-      <Spacer size={25} />
-      <H2 style={styles.H2Style}>How are you feeling?</H2>
-      <Spacer size={100} />
-      <GallerySwiper
-        style={{
-          height: 300,
-          width: 250,
-          marginRight: 'auto',
-          marginLeft: 'auto',
-          backgroundColor: '#000',
-          borderRadius: 25,
-          overflow: 'hidden',
-        }}
-        images={[
-          {
-            uri: 'https://i.imgur.com/c9x0VLe.jpg',
-            dimensions: { width: 1080, height: 1920 },
-          },
-          {
-            uri: 'https://i.imgur.com/c9x0VLe.jpg',
-            dimensions: { width: 1080, height: 1920 },
-          },
-          {
-            uri: 'https://i.imgur.com/c9x0VLe.jpg',
-            dimensions: { width: 1080, height: 1920 },
-          },
-          {
-            uri: 'https://i.imgur.com/c9x0VLe.jpg',
-            dimensions: { width: 1080, height: 1920 },
-          },
-          {
-            uri: 'https://i.imgur.com/c9x0VLe.jpg',
-            dimensions: { width: 1080, height: 1920 },
-          },
-        ]}
-      />
-      <Spacer size={100} />
-      <AppButton onPress={() => alert("button pressed")} title="Next Question" />
-    </Content>
-  </Container>
-);
-
-export default Question1;*/
-
 export default class App extends React.Component {
   constructor(props) {
     super(props);
@@ -146,9 +86,7 @@ export default class App extends React.Component {
 
   render() {
     return (
-      
       <SafeAreaView style={{ flex: 1, backgroundColor: '#F6F6F6', paddingTop: 50 }}>
-       
         <H1 style={styles.H1Style}>READ ME</H1>
 
         <Progress.Bar
@@ -176,7 +114,6 @@ export default class App extends React.Component {
         </View>
         <AppButton onPress={() => alert('Next question')} title="Next Question" />
       </SafeAreaView>
-      
     );
   }
 }
