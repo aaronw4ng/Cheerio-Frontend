@@ -4,7 +4,8 @@ import { Scene, Stack } from 'react-native-router-flux';
 import Question1 from '../components/Questions/Question6';
 import GriefResultPage from '../components/GriefResultPage';
 import ViolatedResultPage from '../components/ViolatedResultPage';
-import EmotionSearch from '../components/EmotionSearch';
+import SadEmotionSearch from '../components/SadEmotionSearch';
+import AngerEmotionSearch from '../components/AngerEmotionSearch';
 import GeneralEmotionSearch from '../components/GeneralEmotionSearch';
 import LandingPage from '../components/LandingPage';
 import Login from '../components/Screens/Login';
@@ -14,7 +15,7 @@ const Index = (
     <Scene hideNavBar>
       <Stack key="home">
         {/* Start with question flow for sake of demo */}
-        <Scene key="home" component={ViolatedResultPage} />
+        <Scene key="home" component={AngerEmotionSearch} />
       </Stack>
     </Scene>
   </Stack>

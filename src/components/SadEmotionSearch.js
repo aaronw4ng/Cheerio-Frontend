@@ -96,7 +96,7 @@ const ResultPage = () => (
             <Button style={styles.buttonClear}>
                 <View style={{flex: 1, flexDirection: 'row'}}>
                     <View>
-                        <Text style={styles.emotion}>Remorsefu</Text>
+                        <Text style={styles.emotion}>Remorseful</Text>
                         <Text style={styles.emotionDescription}>Feeling really sorry because you did or said something wrong</Text>
                     </View>
                     <Image 
