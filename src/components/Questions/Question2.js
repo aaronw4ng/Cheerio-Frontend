@@ -13,6 +13,7 @@ const styles = StyleSheet.create({
   H1Style: {
     fontFamily: 'NunitoRegular',
     fontSize: 26,
+    marginTop: 20,
     marginRight: 'auto',
     marginLeft: 'auto',
   },
@@ -66,7 +67,7 @@ const Question2 = () => (
         <H2 style={styles.H2Style}>
           Is this feeling caused by a person or something that happened?
         </H2>
-        <Spacer size={100} />
+        <Spacer size={50} />
         <TouchableOpacity style={styles.button}>
           <Text style={styles.buttonText}>A Person</Text>
         </TouchableOpacity>

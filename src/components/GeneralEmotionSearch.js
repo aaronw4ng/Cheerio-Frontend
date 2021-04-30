@@ -25,6 +25,7 @@ const ResultPage = () => (
           style={{
             fontSize: 30,
             textAlign: 'center',
+            fontFamily: 'NunitoRegular',
           }}
         >
           Dictionary
@@ -75,10 +76,18 @@ const ResultPage = () => (
         justifyContent: 'space-evenly',
       }}
     >
-      <TouchableOpacity>
+      <TouchableOpacity
+        onPress={() => {
+          Actions.LandingPage();
+        }}
+      >
         <Image source={require('../../assets/images/navbar/home-nav-inactive.png')} />
       </TouchableOpacity>
-      <TouchableOpacity>
+      <TouchableOpacity
+        onPress={() => {
+          Actions.Question1();
+        }}
+      >
         <Image source={require('../../assets/images/navbar/readme-nav-inactive.png')} />
       </TouchableOpacity>
       <TouchableOpacity>

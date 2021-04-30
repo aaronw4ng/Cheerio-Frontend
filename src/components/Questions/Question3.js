@@ -14,6 +14,7 @@ const styles = StyleSheet.create({
   H1Style: {
     fontFamily: 'NunitoRegular',
     fontSize: 26,
+    marginTop: 20,
     marginRight: 'auto',
     marginLeft: 'auto',
   },
@@ -66,7 +67,7 @@ const Question3 = () => (
         />
         <Spacer size={25} />
         <H2 style={styles.H2Style}>When you look at the person do you feel annoyance or pain?</H2>
-        <Spacer size={100} />
+        <Spacer size={60} />
         <TouchableOpacity style={styles.button}>
           <Text style={styles.buttonText}>Annoyance</Text>
         </TouchableOpacity>

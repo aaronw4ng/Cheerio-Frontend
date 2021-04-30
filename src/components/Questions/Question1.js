@@ -116,6 +116,7 @@ export default class App extends React.Component {
 
           <View style={{ flex: 1, flexDirection: 'row', justifyContent: 'center' }}>
             <Carousel
+              removeClippedSubviews="false"
               layout={'default'}
               ref={(ref) => (this.carousel = ref)}
               data={this.state.carouselItems}

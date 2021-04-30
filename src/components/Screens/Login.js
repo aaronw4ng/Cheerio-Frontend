@@ -8,7 +8,7 @@ import Spacer from '../UI/Spacer';
 
 const styles = StyleSheet.create({
   H1Style: {
-    fontFamily: 'Bungee_Regular',
+    fontFamily: 'NunitoRegular',
     fontSize: 38,
     textAlign: 'left',
     marginLeft: 25,
@@ -16,7 +16,7 @@ const styles = StyleSheet.create({
     padding: 5,
   },
   H2Style: {
-    fontFamily: 'Bungee_Regular',
+    fontFamily: 'NunitoRegular',
     textAlign: 'center',
     padding: 25,
     fontSize: 18,
@@ -39,7 +39,7 @@ const styles = StyleSheet.create({
   SignInText: {
     fontSize: 14,
     color: '#000',
-    fontFamily: 'Bungee_Regular',
+    fontFamily: 'NunitoRegular',
     fontWeight: 'bold',
     alignSelf: 'center',
     textTransform: 'uppercase',
