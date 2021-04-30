@@ -3,20 +3,27 @@ import React from 'react';
 import GallerySwiper from 'react-native-gallery-swiper';
 import * as Progress from 'react-native-progress';
 import { Container, Content, H1, H2 } from 'native-base';
-import { Alert, StyleSheet, Text, View, SafeAreaView, Image, ImageBackground, TouchableOpacity } from 'react-native';
+import { Alert, StyleSheet, Text, View, SafeAreaView, Image, TouchableOpacity } from 'react-native';
 import Carousel from 'react-native-snap-carousel';
-import { LinearGradient } from "expo-linear-gradient";
+import { LinearGradient } from 'expo-linear-gradient';
+import { Actions } from 'react-native-router-flux';
 
 import AppButton from '../UI/AppButton';
-import Spacer from '../UI/Spacer';
+import NavBar from '../NavBar';
 
 const styles = StyleSheet.create({
-  H1Style: { fontFamily: 'Bungee_Regular', fontSize: 26, marginTop: 40 },
+  H1Style: {
+    fontFamily: 'NunitoRegular',
+    fontSize: 26,
+    marginTop: 40,
+    marginRight: 'auto',
+    marginLeft: 'auto',
+  },
   H2Style: {
-    fontFamily: 'Arial_Round',
+    fontFamily: 'NunitoBold',
     textAlign: 'center',
-    fontSize: 20,
-    paddingBottom: 80,
+    fontSize: 22,
+    paddingBottom: 20,
   },
   linearGradient: {
     width: '100%',
@@ -33,37 +40,31 @@ export default class App extends React.Component {
       activeIndex: 0,
       startColor: '#FDA085',
       endColor: '#F6D365',
-      currEmotion: 'happy',
+      currEmotion: 'Happy',
       carouselItems: [
         {
           title: 'Happy',
-          subtitle: 'Text 1',
-          illustration: 'https://imgur.com/2EK0yOs.png',
+          illustration: 'https://i.imgur.com/3Al9joX.png',
         },
         {
           title: 'Sad',
-          subtitle: 'Text 2',
-          illustration: 'https://imgur.com/lfaxNrK.png',
+          illustration: 'https://imgur.com/6TYotq1.png',
         },
         {
           title: 'Surprised',
-          subtitle: 'Text 3',
-          illustration: 'https://imgur.com/6NDa1fH.png',
-        },
-        {
-          title: 'Disgusted',
-          subtitle: 'Text 4',
-          illustration: 'https://imgur.com/MbQtosJ.png',
+          illustration: 'https://imgur.com/o2GaMvK.png',
         },
         {
           title: 'Fear',
-          subtitle: 'Text 5',
-          illustration: 'https://imgur.com/MbQtosJ.png',
+          illustration: 'https://i.imgur.com/vxGdhgJ.png',
+        },
+        {
+          title: 'Disgusted',
+          illustration: 'https://imgur.com/w6EgPiK.png',
         },
         {
           title: 'Anger',
-          subtitle: 'Text 6',
-          illustration: 'https://imgur.com/l8OC3IL.png',
+          illustration: 'https://imgur.com/R2Nelcw.png',
         },
       ],
     };
@@ -73,16 +74,8 @@ export default class App extends React.Component {
     return (
       <View
         style={{
-          backgroundColor: '#FCEAB8',
           borderRadius: 15,
-          borderColor: 'black',
-          borderWidth: 1.5,
-          height: 300,
-          marginLeft: 25,
-          marginRight: 25,
-          shadowColor: 'black',
-          shadowOffset: { height: 8 },
-          shadowOpacity: 0.2,
+          height: 380,
         }}
       >
         <Image
@@ -90,7 +83,6 @@ export default class App extends React.Component {
             width: '100%',
             height: '100%',
             overflow: 'hidden',
-            borderRadius: 15,
           }}
           source={{ uri: item.illustration }}
         />
@@ -105,15 +97,16 @@ export default class App extends React.Component {
       <LinearGradient
         colors={[this.state.startColor, this.state.endColor]}
         start={[0.1, 0.1]}
-        style={styles.linearGradient}>
-        <SafeAreaView style={{ flex: 1, paddingTop: 50 }}>
+        style={styles.linearGradient}
+      >
+        <SafeAreaView style={{ flex: 1, paddingTop: 20 }}>
           <H1 style={styles.H1Style}>Read Me</H1>
 
           <Progress.Bar
-            progress={0.1}
-            width={332}
+            progress={0.14}
+            width={370}
             height={8}
-            unfilledColor='rgba(246, 246, 246, 0.1)'
+            unfilledColor="rgba(246, 246, 246, 0.1)"
             borderColor="white"
             color="white"
             style={{ marginLeft: 'auto', marginRight: 'auto', margin: 20 }}
@@ -126,57 +119,38 @@ export default class App extends React.Component {
               layout={'default'}
               ref={(ref) => (this.carousel = ref)}
               data={this.state.carouselItems}
-              sliderWidth={300}
-              itemWidth={280}
+              sliderWidth={380}
+              itemWidth={250}
               renderItem={this._renderItem}
               onSnapToItem={(index) => this.setState({ activeIndex: index })}
               onScrollEndDrag={() => {
-                if(this.state.currEmotion === 'happy'){
+                if (this.state.currEmotion === 'Happy') {
                   this.state.startColor = '#A9CDEB';
                   this.state.endColor = '#B9B6E5';
-                  this.state.currEmotion = 'sad';
+                  this.state.currEmotion = 'Sad';
+                } else if (this.state.currEmotion === 'Sad') {
+                  this.state.startColor = '#FFC796';
+                  this.state.endColor = '#FF6D93';
+                  this.state.currEmotion = 'Surprised';
+                } else if (this.state.currEmotion === 'Surprised') {
+                  this.state.startColor = '#D3C6FE';
+                  this.state.endColor = '#FAACA8';
+                  this.state.currEmotion = 'Fear';
+                } else if (this.state.currEmotion === 'Fear') {
+                  this.state.startColor = '#ACD0AF';
+                  this.state.endColor = '#FBED96';
+                  this.state.currEmotion = 'Disgusted';
+                } else if (this.state.currEmotion === 'Disgusted') {
+                  this.state.startColor = '#F9748F';
+                  this.state.endColor = '#FE9A8B';
+                  this.state.currEmotion = 'Anger';
                 }
-                else if(this.state.currEmotion === 'sad'){
-                this.state.startColor = '#FFC796';
-                this.state.endColor = '#FF6D93';
-                this.state.currEmotion = 'surprised';
-              }
-              else if(this.state.currEmotion === 'surprised') {
-                this.state.startColor = '#D3C6FE';
-                this.state.endColor = '#FAACA8';
-                this.state.currEmotion = 'fear';
-              }
-              else if(this.state.currEmotion === 'fear') {
-                this.state.startColor = '#ACD0AF';
-                this.state.endColor = '#FBED96';
-                this.state.currEmotion = 'disgusted';
-              }
-              else if(this.state.currEmotion === 'disgusted') {
-                this.state.startColor = '#F9748F';
-                this.state.endColor = '#FE9A8B';
-                this.state.currEmotion = 'anger';
-              }
-                
               }}
-              
             />
           </View>
-          <AppButton onPress={() => alert('Next question')} title="Next Question" />
-
+          <AppButton onPress={() => Actions.Question2()} title="Next Question" />
         </SafeAreaView>
-        <View style={{
-          height: 80,
-          width: 410,
-          borderRadius: 24,
-          backgroundColor: 'white',
-          flexDirection: 'row',
-          justifyContent: 'space-evenly',
-        }}>
-          <TouchableOpacity><Image source={require('../../../assets/images/navbar/home-nav-inactive.png')} /></TouchableOpacity>
-          <TouchableOpacity><Image source={require('../../../assets/images/navbar/readme-nav-active.png')} /></TouchableOpacity>
-          <TouchableOpacity><Image source={require('../../../assets/images/navbar/dictionary-nav-inactive.png')} /></TouchableOpacity>
-
-        </View>
+        <NavBar />
       </LinearGradient>
     );
   }

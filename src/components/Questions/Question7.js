@@ -9,9 +9,9 @@ import AppButton from '../UI/AppButton';
 import Spacer from '../UI/Spacer';
 
 const styles = StyleSheet.create({
-  H1Style: { fontFamily: 'Bungee_Regular', fontSize: 26 },
+  H1Style: { fontFamily: 'NunitoRegular', fontSize: 26 },
   H2Style: {
-    fontFamily: 'Arial_Round',
+    fontFamily: 'NunitoBold',
     textAlign: 'center',
     fontSize: 20,
   },
@@ -25,7 +25,7 @@ const Question7 = () => (
       <Spacer size={25} />
       <Progress.Bar
         progress={0.1}
-        width={335}
+        width={370}
         height={10}
         unfilledColor="#fff"
         borderColor="#000"

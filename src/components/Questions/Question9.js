@@ -25,7 +25,7 @@ const Question9 = () => (
       <Spacer size={25} />
       <Progress.Bar
         progress={0.1}
-        width={335}
+        width={370}
         height={10}
         unfilledColor="#fff"
         borderColor="#000"

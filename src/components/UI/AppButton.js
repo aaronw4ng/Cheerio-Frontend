@@ -20,7 +20,7 @@ const styles = StyleSheet.create({
   ButtonText: {
     fontSize: 14,
     color: 'black',
-    fontFamily: 'Bungee_Regular',
+    fontFamily: 'NunitoBold',
     alignSelf: 'center',
     marginRight: 10,
     marginLeft: 10,

@@ -1,23 +1,39 @@
 import React from 'react';
 
-import GallerySwiper from 'react-native-gallery-swiper';
 import * as Progress from 'react-native-progress';
 import { Container, Content, H1, H2 } from 'native-base';
-import { Alert, StyleSheet, Text, View, SafeAreaView, Image, ImageBackground, TouchableOpacity } from 'react-native';
+import {
+  Alert,
+  StyleSheet,
+  Text,
+  View,
+  SafeAreaView,
+  Image,
+  ImageBackground,
+  TouchableOpacity,
+} from 'react-native';
 import Carousel from 'react-native-snap-carousel';
-import { LinearGradient } from "expo-linear-gradient";
+import { LinearGradient } from 'expo-linear-gradient';
 
 import AppButton from '../UI/AppButton';
 import Spacer from '../UI/Spacer';
+import { Actions } from 'react-native-router-flux';
+import NavBar from '../NavBar';
 
 const styles = StyleSheet.create({
-  H1Style: { fontFamily: 'Bungee_Regular', fontSize: 26, marginTop: 40 },
+  H1Style: {
+    fontFamily: 'NunitoRegular',
+    fontSize: 26,
+    marginTop: 40,
+    marginLeft: 'auto',
+    marginRight: 'auto',
+  },
   H2Style: {
-    fontFamily: 'Arial_Round',
+    fontFamily: 'NunitoBold',
     textAlign: 'center',
     fontSize: 20,
     paddingBottom: 80,
-    width: 320
+    width: 320,
   },
   linearGradient: {
     width: '100%',
@@ -45,7 +61,7 @@ export default class App extends React.Component {
           title: 'Why did you do that?',
           subtitle: 'Text 2',
           illustration: 'https://imgur.com/2EK0yOs.png',
-        }
+        },
       ],
     };
   }
@@ -86,15 +102,16 @@ export default class App extends React.Component {
       <LinearGradient
         colors={[this.state.startColor, this.state.endColor]}
         start={[0.1, 0.1]}
-        style={styles.linearGradient}>
+        style={styles.linearGradient}
+      >
         <SafeAreaView style={{ flex: 1, paddingTop: 50 }}>
           <H1 style={styles.H1Style}>Read Me</H1>
 
           <Progress.Bar
-            progress={0.7}
-            width={332}
+            progress={0.84}
+            width={370}
             height={8}
-            unfilledColor='rgba(246, 246, 246, 0.1)'
+            unfilledColor="rgba(246, 246, 246, 0.1)"
             borderColor="white"
             color="white"
             style={{ marginLeft: 'auto', marginRight: 'auto', margin: 20 }}
@@ -120,22 +137,9 @@ export default class App extends React.Component {
               }}
             />
           </View>
-          <AppButton onPress={() => alert('Next question')} title="Next Question" />
-
+          <AppButton onPress={() => Actions.GriefResultPage()} title="Next Question" />
         </SafeAreaView>
-        <View style={{
-          height: 80,
-          width: 410,
-          borderRadius: 24,
-          backgroundColor: 'white',
-          flexDirection: 'row',
-          justifyContent: 'space-evenly',
-        }}>
-          <TouchableOpacity><Image source={require('../../../assets/images/navbar/home-nav-inactive.png')} /></TouchableOpacity>
-          <TouchableOpacity><Image source={require('../../../assets/images/navbar/readme-nav-active.png')} /></TouchableOpacity>
-          <TouchableOpacity><Image source={require('../../../assets/images/navbar/dictionary-nav-inactive.png')} /></TouchableOpacity>
-
-        </View>
+        <NavBar />
       </LinearGradient>
     );
   }
